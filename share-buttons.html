@@ -1,0 +1,23 @@
+{% capture share_button %}
+<div class="share-buttons">
+  <h5>Share this post on</h5>
+  <ul class="social-media">
+    <li>
+        <a title="{{ site.theme.social.weibo }} on weibo" 
+          href="https://weibo.com/2716885615/profile?topnav=1&wvr=6&is_all=1" class="weibo wc-img-replace" target="_blank">
+         weibo
+        </a>
+    </li>   
+    <li>
+        <a title="{{ site.theme.social.github }} on github" 
+            href="https://github.com/sunsipan" 
+            class="github wc-img-replace" target="_blank">github</a>
+    </li>
+    <li>
+        <a title="{{ site.theme.social.wechat }} on wechat" 
+            href="https://www.wechat.com/sharer/sharer.php?u={{site.url}}{{page.url}}&amp;t={{page.title}}" 
+            class="wechat wc-img-replace" target="_blank">wechat</a>
+    </li>
+  </ul>
+</div>
+{% endcapture %}{{ share_button | strip_newlines }}

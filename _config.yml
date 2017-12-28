@@ -1,0 +1,65 @@
+# Site settings
+title: SunKatrina's blog
+tagline: eat, play, love
+email: 1635707508@qq.com
+description: >
+  156的高度也能撑起一片属于自己的天空 
+baseurl: "/ideal-waddle" 
+url: "" # the base hostname & protocol for your site
+logourl: /assets/images/logo.png 
+author: "SunKatrina盼盼"
+author_thumbnail: "/assets/images/avatar.jpg" 
+# Theme customization
+theme:
+  # 主题色
+  highlight_color: "#BDECB6"
+  # Social media links
+  social: 
+    github: leighcc
+
+  # Enable share buttons on post footer
+  show_share_buttons: 
+
+  # Show author picure, name and social links on post footer
+  show_author_info: 
+
+  # Disqus comments manager - shortname
+  disqus_shortname: leighccgithubioidealwaddle
+
+  # Google Analytics/Webmaster key, leave blank to ignore
+  google_analytics_key: 
+  google_webmaster_key: 
+
+# Markdown文件解析器
+markdown: kramdown
+
+kramdown:
+  input: GFM
+
+# 摘要分隔符
+excerpt_separator: <!--more-->
+
+# Permalinks
+permalink:        pretty
+
+# 分页
+paginate: 2
+
+# Files/Folders to be excluded from generated _site folder
+exclude: 
+  - CNAME
+  - Gemfile
+  - Rakefile
+  - README.md
+  - .gitignore
+  - .sass-cache
+  - Gemfile.lock
+
+# Sass conversion configs
+sass:
+  sass_dir: assets/css/_sass
+  style: :compressed
+
+gems:
+  - jekyll-paginate
+  - jemoji

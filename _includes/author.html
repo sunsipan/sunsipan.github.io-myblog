@@ -1,0 +1,37 @@
+{% capture author_info %}
+<div class="author">
+ {% if site.author_thumbnail && site.author_thumbnail != '' %}
+  <a href="{{ '/about' | prepend: site.baseurl | prepend: site.url }}">
+    <img 
+      src="{{ site.author_thumbnail | prepend: site.baseurl | prepend: site.url }}"
+      alt="{{ site.title }}" width="60" height="60" />
+  </a>
+  {% endif %}
+  <h5>Author</h4>
+  <h6>
+    <a href="{{ '/about' | prepend: site.baseurl | prepend: site.url }}">
+      {{ site.author }}
+    </a>
+  </h5>
+  <p>
+    Find me on
+    {% if site.theme.social.weibo %}
+        <a title="{{ site.theme.social.weibo }} on weibo" 
+            href="https://weibo.com/2716885615/profile?topnav=1&wvr=6&is_all=1"/{{ site.theme.social.weibo }}" 
+            class="weibo" target="_blank">weibo</a>
+    {% endif %}
+    {% if site.theme.social.wetchat %}
+        /
+        <a title="{{ site.theme.social.wetchat }} on wetchat" 
+            href="https://wetchat.com/{{ site.theme.social.wetchat }}" 
+            class="wetchat" target="_blank">wetchat</a>
+    {% endif %} 
+    {% if site.theme.social.gplus %}
+        /
+        <a title="{{ site.theme.social.github }} on github" 
+            href="https://sunsipan.github.io/{{ site.theme.social.github}}" 
+            class="github" target="_blank">github</a>
+    {% endif %}
+  </p>
+</div>
+{% endcapture %}{{ author_info | strip_newlines }}
